@@ -22,5 +22,10 @@ describe Bank do
   it 'allows to add money to debit' do
     expect(bank.debit(10)).to eq(10)
   end
-  
+
+  it 'allows to deduct money from balance' do
+    bank.debit(10)
+    expect(bank.credit(10)).to eq(0)
+  end
+
 end

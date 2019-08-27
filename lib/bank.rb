@@ -7,11 +7,12 @@ attr_reader :balance
   end
 
   def debit(money)
-    @balance += money 
+    @balance += money
   end
 
   def credit(money)
     raise "Not enough money" if money > @balance
+    @balance -= money 
   end
 
 end
