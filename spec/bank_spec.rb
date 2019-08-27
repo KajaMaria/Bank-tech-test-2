@@ -18,4 +18,9 @@ describe Bank do
   it 'doest not allow to withdraw money if balance is below 0 ' do
     expect{ bank.credit(10) }.to raise_error "Not enough money"
   end
+
+  it 'allows to add money to debit' do
+    expect(bank.debit(10)).to eq(10)
+  end
+  
 end
