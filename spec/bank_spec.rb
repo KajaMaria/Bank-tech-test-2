@@ -28,4 +28,6 @@ describe Bank do
     expect(bank.credit(10)).to eq(0)
   end
 
+
+
 end
