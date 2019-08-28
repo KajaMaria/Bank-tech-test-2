@@ -8,8 +8,8 @@ subject(:transaction) { described_class.new }
     expect(transaction.date).to eq("28/08/2019")
   end
 
-  it 'can take a note of a the money debitted to clients account' do
-    expect(transaction.information("20")).to eq(20.00)
+  it 'can take a note of a the money debitted or creditted to and from clients account' do
+    expect(transaction.information("20","20")).to eq([20.00,20.00])
   end
 
 
