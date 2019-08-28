@@ -8,4 +8,7 @@ class Transaction
 
   end
 
+  def information(cash_in)
+    cash_in.to_f
+  end
 end
