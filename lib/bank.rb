@@ -7,11 +7,11 @@ attr_reader :balance, :transaction
     @transaction = []
   end
 
-  def debit(money)
+  def deposit(money)
     @balance += money
   end
 
-  def credit(money)
+  def withdraw(money)
     raise "Not enough money" if money > @balance
     @balance -= money
   end

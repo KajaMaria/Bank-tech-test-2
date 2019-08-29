@@ -7,8 +7,12 @@ class Transaction
     @record = {}
   end
 
-  def log(deposit)
-
+  def log(credit = nil, debit = nil, balance)
+    @record = {
+      credit: credit,
+      debit: debit,
+      balance: balance
+    }
   end
 
 
