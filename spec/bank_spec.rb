@@ -23,18 +23,24 @@ describe Bank do
   end
 
   it 'allows to add money to debit' do
-    expect(bank.deposit(10)).to eq(10)
+    bank.deposit(10)
+    expect(bank.balance).to eq(10)
   end
 
   it 'allows to deduct money from balance' do
     bank.deposit(10)
-    expect(bank.withdraw(10)).to eq(0)
+    bank.withdraw(10)
+    expect(bank.balance).to eq(0)
   end
 
-  it 'has can have a new transaction' do
-    expect(bank.transaction).to eq([])
+  describe "deposit" do
+    it "should pass details to transaction" do
+      bank.deposit(100)
+      expect(bank.transaction.record).to eq({
+        credit: 100,
+        debit: nil,
+        balance: 100
+      })
+    end
   end
-
-
-
 end

@@ -4,16 +4,17 @@ attr_reader :balance, :transaction
 
   def initialize
     @balance = 0
-    @transaction = []
+    @transaction = Transaction.new
   end
 
-  def deposit(money)
-    @balance += money
+  def deposit(credit)
+    @balance += credit
+    @transaction.log(credit,nil, balance)
   end
 
-  def withdraw(money)
-    raise "Not enough money" if money > @balance
-    @balance -= money
+  def withdraw(debit)
+    raise "Not enough money" if debit > @balance
+    @balance -= debit
   end
 
 end
