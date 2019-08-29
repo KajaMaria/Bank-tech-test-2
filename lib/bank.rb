@@ -15,6 +15,7 @@ attr_reader :balance, :transaction
   def withdraw(debit)
     raise "Not enough money" if debit > @balance
     @balance -= debit
+    @transaction.log(nil,debit, balance)
   end
 
 end

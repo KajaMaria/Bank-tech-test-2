@@ -43,4 +43,16 @@ describe Bank do
       })
     end
   end
+
+  describe "withdraw" do
+    it "should pass on debit details to transaction" do
+      bank.deposit(100)
+      bank.withdraw(10)
+      expect(bank.transaction.record).to eq({
+        credit: nil,
+        debit: 10,
+        balance: 90
+      })
+    end
+  end
 end
