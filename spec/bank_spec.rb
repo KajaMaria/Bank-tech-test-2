@@ -4,8 +4,8 @@ describe Bank do
   subject(:bank) { described_class.new }
 
 
-  let(:transaction) { double(:transaction, print: information) }
-  let(:information) { "28/08/2019" }
+  let(:transaction) { double(:transaction) }
+
 
 
   it ' respons to debit with one argument' do
@@ -32,6 +32,10 @@ describe Bank do
     bank.debit(10)
     expect(bank.credit(10)).to eq(0)
   end
+
+  it 'has can have a new transaction' do
+    expect(bank.transaction).to eq([])
+  end 
 
 
 

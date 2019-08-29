@@ -1,9 +1,10 @@
 
 class Bank
-attr_reader :balance
+attr_reader :balance, :transaction
 
   def initialize
     @balance = 0
+    @transaction = []
   end
 
   def debit(money)
@@ -12,7 +13,7 @@ attr_reader :balance
 
   def credit(money)
     raise "Not enough money" if money > @balance
-    @balance -= money 
+    @balance -= money
   end
 
 end
