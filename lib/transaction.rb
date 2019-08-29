@@ -4,9 +4,12 @@ class Transaction
   attr_reader :record
 
   def initialize
-    @record= {}
+    @record = {}
   end
 
+  def log(deposit)
+
+  end
 
 
 end
