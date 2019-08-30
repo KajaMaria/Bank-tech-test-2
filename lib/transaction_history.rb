@@ -7,4 +7,8 @@ attr_reader :statement
     @statement = []
   end
 
+  def add_record(record)
+    @statement.push(record)
+  end
+
 end
