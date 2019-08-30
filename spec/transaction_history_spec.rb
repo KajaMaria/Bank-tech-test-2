@@ -9,4 +9,5 @@ subject(:transaction_history) { described_class.new }
       expect(transaction_history.date).to eq("#{date}")
     end
   end
-end 
+  
+end

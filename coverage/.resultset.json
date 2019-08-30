@@ -96,6 +96,7 @@
         1,
         null,
         null,
+        null,
         null
       ],
       "/Users/kajapolkowska/Desktop/Makers_Course/Bank-Tech-2/lib/transaction_history.rb": [
@@ -105,7 +106,7 @@
         1,
         null,
         1,
-        1,
+        13,
         null,
         null,
         null
@@ -115,9 +116,13 @@
         null,
         1,
         null,
-        4,
+        5,
         null,
         1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -146,7 +151,8 @@
         1,
         null,
         1,
-        11,
+        12,
+        12,
         null,
         null,
         1,
@@ -161,6 +167,6 @@
         null
       ]
     },
-    "timestamp": 1567072081
+    "timestamp": 1567158982
   }
 }
