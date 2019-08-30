@@ -1,10 +1,9 @@
 
 class Transaction_history
 
-attr_reader :date, :statement
+attr_reader :statement
 
   def initialize
-    @date = Time.new.strftime("%d/%m/%Y")
     @statement = []
   end
 

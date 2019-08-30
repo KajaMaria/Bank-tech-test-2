@@ -35,8 +35,10 @@ describe Bank do
 
   describe "deposit" do
     it "should pass details to transaction" do
+      date = Time.new.strftime("%d/%m/%Y")
       bank.deposit(100)
       expect(bank.transaction.record).to eq({
+        date: date,
         credit: 100,
         debit: nil,
         balance: 100
@@ -46,9 +48,11 @@ describe Bank do
 
   describe "withdraw" do
     it "should pass on debit details to transaction" do
+      date = Time.new.strftime("%d/%m/%Y")
       bank.deposit(100)
       bank.withdraw(10)
       expect(bank.transaction.record).to eq({
+        date: date,
         credit: nil,
         debit: 10,
         balance: 90
