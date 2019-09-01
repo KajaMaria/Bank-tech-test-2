@@ -31,15 +31,17 @@ To clone the repo
 
 
 ## Rspec Tests
- - cd bank-tech-test
+- cd bank-tech-test
 - rspec
 
 
 ## Usage
 irb
 
--  require "./lib/bank"
--  bank = Bank.new
--  bank.deposit(100.99)
--  bank.withdrawal(100.99)
--  puts bank.statement
+```
+require "./lib/bank"
+bank = Bank.new
+bank.deposit(100.99)
+bank.withdrawal(100.99)
+```
+puts bank.statement
