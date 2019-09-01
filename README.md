@@ -25,19 +25,21 @@ date       || credit || debit   || balance
 ## Installation
 
 To clone the repo
-$ git clone https://github.com/adrianeyre/bank-tech-test
-$ cd bank-tech-test
-$ bundle
+ - git clone https://github.com/KajaMaria/Bank-tech-test-2
+ - cd bank-tech-test
+ - bundle
 
 
 ## Rspec Tests
-$ cd bank-tech-test
-$ rspec
-Usage
+ - cd bank-tech-test
+- rspec
+
+
+## Usage
 irb
 
-$ require "./lib/account"
-$ bank = Bank.new
-$ bank.deposit(100.99)
-$ bank.withdrawal(100.99)
-$ puts bank.statement
+-  require "./lib/bank"
+-  bank = Bank.new
+-  bank.deposit(100.99)
+-  bank.withdrawal(100.99)
+-  puts bank.statement
