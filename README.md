@@ -43,5 +43,5 @@ require "./lib/bank"
 bank = Bank.new
 bank.deposit(100.99)
 bank.withdrawal(100.99)
-```
 puts bank.statement
+```
